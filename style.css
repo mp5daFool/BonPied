@@ -404,11 +404,7 @@ header a:hover{
   	gap: 6px;
 }
 .search {
-  	position: absolute;
-  	width: 100%;
-  	top: 0.5px;
-  	right: 0%;
-  	left: 0%;
+  gap: 30px;
   	border-radius: 18px;
   	background-color: #e7e7e7;
   	border: 2px solid #656366;
