@@ -321,7 +321,6 @@ a{
   	width: 102px;
   	position: relative;
   	height: 43px;
-  	overflow: hidden;
   	flex-shrink: 0;
   	z-index: 0;
 }
@@ -355,6 +354,7 @@ header a:hover{
     color : var(--primary);
 }
 
+/* //////////////////////////////////////////////////// */
 .logo {
   	position: absolute;
   	top: calc(50% - 13.5px);
@@ -364,10 +364,12 @@ header a:hover{
   	width: 102px;
   	position: relative;
   	height: 43px;
-  	overflow: hidden;
   	flex-shrink: 0;
   	z-index: 0;
 }
+
+/* //////////////////////////////////////////////////// */
+
 .profileDiv {
   	width: 52px;
   	position: relative;
@@ -388,6 +390,9 @@ header a:hover{
   	padding: 5px 10px;
   	z-index: 1;
 }
+
+/* //////////////////////////////////////////////////// */
+
 .searchIcon {
   	width: 28px;
   	height: 28px;
@@ -403,26 +408,26 @@ header a:hover{
   	justify-content: flex-start;
   	gap: 6px;
 }
-.search {
-  gap: 30px;
-  	border-radius: 18px;
-  	background-color: #e7e7e7;
-  	border: 2px solid #656366;
-  	box-sizing: border-box;
-  	height: 43px;
-  	overflow: hidden;
-  	display: flex;
-  	flex-direction: row;
-  	align-items: center;
-  	justify-content: center;
-  	padding: 15px 10px;
-}
-.searchBar {
+
+input {
   	width: 768px;
   	position: relative;
   	height: 44px;
   	z-index: 2;
   	color: #656366;
+    gap: 30px;
+  	border-radius: 18px;
+  	background-color: #e7e7e7;
+  	border: 2px solid #656366;
+  	box-sizing: border-box;
+  	height: 43px;
+  	display: flex;
+  	justify-content: center;
+    text-align: center;
+  	padding: 15px 10px;
+    font-weight: bold;
+    font-size: 20px;
+
 }
 .toolbarDiv {
   	width: 100px;
@@ -495,7 +500,6 @@ align-self: stretch;
 position: relative;
 border-radius: 21px;
 max-width: 100%;
-overflow: hidden;
 height: 117px;
 flex-shrink: 0;
 object-fit: cover;
