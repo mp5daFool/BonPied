@@ -13,7 +13,7 @@ fetch('sneakers.json')
 						<p>${produit.description}</p>
 					</div>
 
-					<a href="#" class="grandBtnAcheter">
+					<a href="#nul" class="grandBtnAcheter" id="btnAcheter">
 						<div class="btnAcheter">
 							<p>Acheter</p>
 						</div>
@@ -21,11 +21,12 @@ fetch('sneakers.json')
 				</div>
 
             `;
-        });})
+        });
+    })
 
-        // Fetch pour afficher les Services proposés par le site
+// Fetch pour afficher les Services proposés par le site
 
-        fetch('sneakers.json')
+fetch('sneakers.json')
     .then(response => response.json())
     .then(data => {
         data.services.forEach(service => {
@@ -35,7 +36,7 @@ fetch('sneakers.json')
 					<div class="divDroite flex align-start column">
 						<h4 class="grisFonce">${service.nom}</h4>
 						<p class="gris">${service.description}</p>
-						<a href="" class="miniBtnDiv">
+						<a href="#nul" class="miniBtnDiv">
 							<div class="btnServices">
 								<div class="noir">
 									<p>En savoir Plus</p>
@@ -46,11 +47,12 @@ fetch('sneakers.json')
 				</div>
 
             `;
-        });})
+        });
+    })
 
-    // Fetch permettant d'afficher chaques avis utilisateurs "Témoignages" 
+// Fetch permettant d'afficher chaques avis utilisateurs "Témoignages" 
 
-    fetch('sneakers.json')
+fetch('sneakers.json')
     .then(response => response.json())
     .then(data => {
         data.temoignages.forEach(temoignage => {
@@ -65,4 +67,35 @@ fetch('sneakers.json')
 				</div>
 
             `;
-        });})
+        });
+    })
+
+// Fonctionnalités Autres
+
+// Panier 
+
+let btnAcheter = document.querySelectorAll("#btnAcheter")
+let panier = document.getElementById("btnPanier");
+
+
+btnAcheter.forEach(btn =>{
+    btn.addEventListener("click",()=>{
+    console.log("test")
+    })
+})
+
+
+btnAcheter.addEventListener("click", (e) => {
+    
+})
+
+
+function articleAjoute() {
+
+    panier.classList.add("actif");
+
+    setTimeout(() => {
+        bouton.classList.remove("actif");
+    }, 3000);
+
+}
