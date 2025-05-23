@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF Pro Display:wght@700&display=swap" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Euclid Circular B:wght@400&display=swap" />
 	<link rel="stylesheet" href="./node_modules/@material-design-icons/font/index.css">
-
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 
@@ -41,7 +41,7 @@
 
 	<main class="grandMain align-center justify-center">
 
-		<div class="hero">
+		<div class="hero justify-center mt-32">
 
 			<div class="fleches">
 				<a href=""><img src="assets/fleches2.png" alt=""></a>
@@ -62,11 +62,11 @@
 
 			<h2>Découvrez notre collection responsable</h2>
 
-			<div class="Produits flex gap">
+			<div class="Produits flex gap" id="nosProduits">
 
-				<!-- Cartes -->
+				<!-- Cartes Produits -->
 
-				<div class="carte">
+				<!-- <div class="carte">
 					<img class="carteImg" alt="" src="assets/rectangle30.png">
 
 					<p class="grisFonce">Nom du Produit</p>
@@ -82,79 +82,9 @@
 							<p>Acheter</p>
 						</div>
 					</a>
-				</div>
+				</div> -->
 
-				<div class="carte">
-					<img class="carteImg" alt="" src="assets/rectangle30.png">
-
-					<p class="grisFonce">Nom du Produit</p>
-					<div class="carteDiv">
-
-						<p>Atteignez de nouveaux sommets avec nos sneakers </p>
-						<p>hautes performances. Conçues pour offrir un soutien optimal
-							tout en respectant l'environnement.</p>
-					</div>
-
-					<a href="" class="grandBtnAcheter">
-						<div class="btnAcheter">
-							<p>Acheter</p>
-						</div>
-					</a>
-				</div>
-
-				<div class="carte">
-					<img class="carteImg" alt="" src="assets/rectangle30.png">
-
-					<p class="grisFonce">Nom du Produit</p>
-					<div class="carteDiv">
-
-						<p>Atteignez de nouveaux sommets avec nos sneakers </p>
-						<p>hautes performances. Conçues pour offrir un soutien optimal
-							tout en respectant l'environnement.</p>
-					</div>
-
-					<a href="" class="grandBtnAcheter">
-						<div class="btnAcheter">
-							<p>Acheter</p>
-						</div>
-					</a>
-				</div>
-
-				<div class="carte">
-					<img class="carteImg" alt="" src="assets/rectangle30.png">
-
-					<p class="grisFonce">Nom du Produit</p>
-					<div class="carteDiv">
-
-						<p>Atteignez de nouveaux sommets avec nos sneakers </p>
-						<p>hautes performances. Conçues pour offrir un soutien optimal
-							tout en respectant l'environnement.</p>
-					</div>
-
-					<a href="" class="grandBtnAcheter">
-						<div class="btnAcheter">
-							<p>Acheter</p>
-						</div>
-					</a>
-				</div>
-
-				<div class="carte">
-					<img class="carteImg" alt="" src="assets/rectangle30.png">
-
-					<p class="grisFonce">Nom du Produit</p>
-					<div class="carteDiv">
-
-						<p>Atteignez de nouveaux sommets avec nos sneakers </p>
-						<p>hautes performances. Conçues pour offrir un soutien optimal
-							tout en respectant l'environnement.</p>
-					</div>
-
-					<a href="" class="grandBtnAcheter">
-						<div class="btnAcheter">
-							<p>Acheter</p>
-						</div>
-					</a>
-				</div>
+			
 
 		</section>
 
@@ -163,11 +93,11 @@
 			<h2>Marchez avec style tout en respectant la planète avec BonPied, votre destination de sneakers éco-sourcés
 				à Rennes</h2>
 
-			<div class="Services flex gap flex-start align-center justify-center">
+			<div class="Services flex gap flex-start align-center justify-center" id="nosServices">
 
 				<!-- Cartes -->
 
-				<div class="carteServices">
+				<!-- <div class="carteServices">
 					<img class="carteServicesImg" alt="" src="assets/rectangle30.png">
 
 					<div class="divDroite flex align-start column">
@@ -183,11 +113,11 @@
 							</div>
 						</a>
 					</div>
-				</div>
+				</div> -->
 
 				<!-- 2 -->
 
-				<div class="carteServices">
+				<!-- <div class="carteServices">
 					<img class="carteServicesImg" alt="" src="assets/rectangle30.png">
 
 					<div class="divDroite flex align-start column">
@@ -203,7 +133,7 @@
 							</div>
 						</a>
 					</div>
-				</div>
+				</div> -->
 
 
 		</section>
@@ -212,9 +142,9 @@
 
 		<section class="container">
 			<h2>Témoignages</h2>
-			<div class="temoignages flex gap align-center justify-center">
+			<div class="temoignages flex gap align-center justify-center" id="nosTemoignanes">
 
-				<div class="carteUtilisateur column">
+				<!-- <div class="carteUtilisateur column">
 					<p class="nomUtilisateur">Prenom</p>
 					<div class="div2">
 						<div class="typeExperience">Sneakers Urbaines</div>
@@ -223,27 +153,35 @@
 						confortables, stylées et le fait qu'elles soient éco-sourcées me donne encore plus de raisons de
 						les adorer. Merci pour cette superbe collection !</p>
 					<p class="grisFonce">Note : 0 </p>
-				</div>
-
-				<!-- 2 -->
-
-				<div class="temoignages">
-
-				<div class="carteUtilisateur column">
-					<p class="nomUtilisateur">Prenom</p>
-					<div class="div2">
-						<div class="typeExperience">Sneakers Urbaines</div>
-					</div>
-					<p class="commentaire">Les sneakers urbaines de BonPied sont incroyables. Elles sont
-						confortables, stylées et le fait qu'elles soient éco-sourcées me donne encore plus de raisons de
-						les adorer. Merci pour cette superbe collection !</p>
-					<p class="grisFonce">Note : 0 </p>
-				</div>
+				</div> -->
 
 		</section>
 
 	</main>
 
+	<div>
+		<!-- Bouton pour retourner en haut de la page -->
+        <a href="#top" class="topBtn alignCenter flex">
+            <span class="material-icons">arrow_upward</span>
+        </a>
+
+    </div>
+
+	<div>
+		<!-- Bouton pour visualiser le nombre d'articles dans le panier -->
+        <a href="" class="panier alignCenter flex">
+            <img src="assets/panier.png" alt="">
+        </a>
+
+    </div>
+
+	<footer class="flex">
+
+		<div>
+			<p>BonPied - Rennes</p>
+		</div>
+
+	</footer>
 
 	<script src="app.js" defer></script>
 </body>

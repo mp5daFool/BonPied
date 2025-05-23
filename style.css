@@ -15,6 +15,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'SF Pro Display';
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
 }
 
 
@@ -141,6 +144,10 @@
 
 .column {
   flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
 }
 
 /*--------------------------------------------------
@@ -400,7 +407,95 @@ section {
   border: 2px solid var(--grey);
 }
 
+.btnAcheter {
+  align-items: end;
+  width: fit-content;
+  border-radius: 12px;
+  background-color: #dbaa89;
+  height: 43px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 19px;
+  box-sizing: border-box;
+  transition-duration: 4ms;
+}
 
+.btnAcheter:hover {
+  background-color: #d1a285;
+  color: #000;
+  size-adjust: 0.7;
+}
+
+.grandBtnAcheter {
+  align-self: stretch;
+  position: relative;
+  background-color: #fff;
+  height: 43px;
+  color: #000;
+}
+
+.miniBtnDiv {
+  width: 214px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1px 10px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #000;
+  margin-top: 12px;
+}
+
+.btnServices {
+  width: auto;
+  border-radius: 12px;
+  background-color: #dbaa89;
+  color: #000;
+  height: 22px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 19px;
+  box-sizing: border-box;
+  font-size: medium;
+  font-weight: 500;;
+}
+
+.btnServices:hover {
+  background-color: #d1a285;
+  color: #000;
+  size-adjust: 0.7;
+}
+
+.topBtn {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    background-color: #dbaa89;
+    color: #151515;
+    padding: 15px 15px;
+    border-radius: 20px;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    scroll-behavior: smooth;
+}
+
+.panier {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    color: #151515;
+    border-radius: 20px;
+    justify-content: center;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
+    z-index: 1000;
+    scroll-behavior: smooth;
+}
 
 /*--------------------------------------------------
 🎓Header
@@ -422,8 +517,7 @@ section {
 
 header {
   width: 100%;
-  position: relative;
-  border: 1px solid #656366;
+  border: 1px solid #6563664b;
   box-sizing: border-box;
   height: 82px;
   display: flex;
@@ -436,6 +530,9 @@ header {
   font-size: 18px;
   color: #000;
   font-family: 'SF Pro';
+  position: fixed;
+  z-index: 1000;
+  background-color: rgb(255, 255, 255);
 }
 
 header nav {
@@ -449,7 +546,7 @@ header nav a {
 }
 
 header a:hover {
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 /* //////////////////////////////////////////////////// */
@@ -513,7 +610,7 @@ header a:hover {
 }
 
 input {
-  width: 768px;
+  width: 468px;
   position: relative;
   height: 44px;
   z-index: 2;
@@ -530,7 +627,16 @@ input {
   padding: 15px 10px;
   font-weight: bold;
   font-size: 20px;
+  transition: ease-in-out 1s;
+}
 
+input:hover {
+  width: 768px;
+  z-index: 10; 
+}
+input:focus {
+  width: 768px;
+  z-index: 10; 
 }
 
 .toolbarDiv {
@@ -566,15 +672,18 @@ input {
 ---------------------------------------------------*/
 .hero {
   height: fit-content;
+  width: 100%;
   position: relative;
 }
 
 .heroDiv {
-  width: 1264px;
+  width: 100%;
   position: relative;
   height: 192px;
   z-index: 0;
   box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
 }
 
 .heroImgDiv {
@@ -582,7 +691,7 @@ input {
   top: 0px;
   left: calc(50% - 632px); */
   border-radius: 21px;
-  width: 1264px;
+  width: 1162px;
   height: 192px;
   object-fit: cover;
 }
@@ -590,15 +699,28 @@ input {
 .fleches {
   position: absolute;
   top: 59px;
-  left: 1135px;
+  left: 1075px;
   z-index: 5;
+  transition: ease-in-out 0.2s;
 }
+
+.fleches:hover {
+  transform: scale(1.1);
+  z-index: 10;
+}
+
 
 .fleches2 {
   position: absolute;
   top: 59px;
-  right: 1135px;
+  right: 1075px;
   z-index: 5;
+  transition: ease-in-out 0.2s;
+}
+
+.fleches2:hover {
+  transform: scale(1.1);
+  z-index: 10;
 }
 
 /*--------------------------------------------------
@@ -649,6 +771,12 @@ main {
   padding: 28px 14px;
   box-sizing: border-box;
   gap: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carte:hover {
+  transform: scale(1.05);
+  z-index: 10; 
 }
 
 .carteImg {
@@ -660,6 +788,7 @@ main {
   flex-shrink: 0;
   object-fit: cover;
 }
+
 
 .carteDiv {
   align-self: stretch;
@@ -684,30 +813,6 @@ main {
 }
 
 
-
-.btnAcheter {
-  position: absolute;
-  top: 0px;
-  left: 252px;
-  border-radius: 12px;
-  background-color: #dbaa89;
-  height: 43px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 11px 19px;
-  box-sizing: border-box;
-}
-
-.grandBtnAcheter {
-  align-self: stretch;
-  position: relative;
-  background-color: #fff;
-  height: 43px;
-  color: #000;
-}
-
 .carteServices {
   width: 310px;
   border-radius: 21px;
@@ -719,35 +824,14 @@ main {
   padding: 28px 14px;
   box-sizing: border-box;
   gap: 8px;
+  transition: transform 0.2s ease-in-out;
 }
 
-.miniBtnDiv {
-  width: 214px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 1px 10px;
-  box-sizing: border-box;
-  text-align: center;
-  color: #000;
+.carteServices:hover {
+  transform: scale(1.05); 
 }
 
-.btnServices {
-  width: auto;
-  border-radius: 12px;
-  background-color: #dbaa89;
-  color: #000;
-  height: 22px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 11px 19px;
-  box-sizing: border-box;
-  font-size: medium;
-  font-weight: 500;;
-}
+
 
 .carteServicesImg {
   width: 56px;
@@ -812,6 +896,12 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carteUtilisateur:hover {
+  transform: scale(1.05);
+  z-index: 10; 
 }
 
 .nomUtilisateur {
@@ -826,6 +916,21 @@ main {
   color: var(--light-grey);
   font-size: 20px;
 }
+
+/*--------------------------------------------------
+ Footer 
+ --------------------------------------------------*/
+
+ footer {
+  width: 100%;
+  height: 55vh;
+  background-color: #dbaa89;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 98px;
+  gap: 30px;}
 
 
 /*--------------------------------------------------
@@ -853,4 +958,12 @@ main {
 
 .grisFonce {
   color: #565656;
+}
+
+.orange {
+  color: #dbaa89;
+}
+
+.bgOrange {
+  background-color: #dbaa89;
 }
