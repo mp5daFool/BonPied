@@ -84,18 +84,3 @@ btnAcheter.forEach(btn =>{
     })
 })
 
-
-btnAcheter.addEventListener("click", (e) => {
-    
-})
-
-
-function articleAjoute() {
-
-    panier.classList.add("actif");
-
-    setTimeout(() => {
-        bouton.classList.remove("actif");
-    }, 3000);
-
-}
